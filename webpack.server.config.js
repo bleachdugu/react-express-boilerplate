@@ -5,7 +5,7 @@ module.exports = (env, argv) => {
   const SERVER_PATH = (argv.mode === 'production') ?
     './src/server/server-prod.js' :
     './src/server/server-dev.js'
-return ({
+  return ({
     entry: {
       server: SERVER_PATH,
     },
@@ -28,7 +28,7 @@ return ({
           test: /\.js$/,
           exclude: /node_modules/,
           use: {
-            loader: "babel-loader"
+            loader: 'babel-loader'
           }
         }
       ]
