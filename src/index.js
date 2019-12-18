@@ -1,10 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-// import Message from './js/Message'
-import './css/style.css'
+import App from './components/App'
+import './styles/style.scss'
 ReactDOM.render(
-//   <Message />,
-  document.getElementById('react-container') // eslint-disable-line no-undef
+  <div>
+    <h1>Boilerplate</h1>
+    <p class="description">Express and Webpack Three.js Boilerplate App</p>
+    <App />
+  </div>,
+  document.getElementById('app') // eslint-disable-line no-undef
 )
 // Needed for Hot Module Replacement
 if(typeof(module.hot) !== 'undefined') { // eslint-disable-line no-undef
