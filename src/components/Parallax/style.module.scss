@@ -12,7 +12,7 @@
   margin-left: -1500px;
 }
 
-.parallax__layer{
+.parallax_layer{
   position: absolute;
   top: 0;
   right: 0;
@@ -26,7 +26,7 @@
   }
 }
 
-.parallax__cover{
+.parallax_cover{
   background: #2D112B;
   display: block;
   position: absolute;
@@ -41,7 +41,7 @@ $parallax__layers: 6;
 
 @for $i from 0 through $parallax__layers {
   $x: ($parallax__layers - $i) / 2;
-  .parallax__layer__#{$i}{
+  .parallax-layer-#{$i}{
      transform: translateZ(-100 * $x#{px}) scale($x + 1);
   }
 }

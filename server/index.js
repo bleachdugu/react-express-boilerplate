@@ -3,7 +3,8 @@ const webpack = require('webpack')
 const express = require('express')
 const webpackDevMiddleware = require('webpack-dev-middleware')
 const webpackHotMiddleware = require('webpack-hot-middleware')
-const config = require('../../webpack.dev.config.js')
+const config = require('../webpack.config.js')
+
 const app = express(),
   DIST_DIR = __dirname,
   HTML_FILE = path.join(DIST_DIR, 'index.html'),

@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clean": "rm -rf dist",
     "test": "jest",
     "coverage": "jest --coverage",
-    "buildDev": "rm -rf dist && webpack --mode development --config webpack.server.config.js && webpack --mode development --config webpack.dev.config.js",
-    "buildProd": "rm -rf dist && webpack --mode production --config webpack.server.config.js && webpack --mode production --config webpack.prod.config.js",
-    "start": "node ./src/server/server-dev.js"
+    "buildDev": "rm -rf dist && cross-env NODE_ENV=development && webpack --mode development --config webpack.server.config.js && webpack --mode development --config webpack.dev.config.js",
+    "buildProd": "rm -rf dist && cross-env NODE_ENV=production && webpack --mode production --config webpack.server.config.js && webpack --mode production --config webpack.prod.config.js",
+    "start": "cross-env NODE_ENV=development node server",
+    "start:tunnel": "cross-env NODE_ENV=development ENABLE_TUNNEL=true node server",
+    "start:production": "npm run test && npm run build && npm run start:prod",
+    "start:prod": "cross-env NODE_ENV=production node server"
   },
   "jest": {
     "moduleNameMapper": {
@@ -20,6 +24,7 @@
   "license": "MIT",
   "dependencies": {
     "classnames": "^2.2.6",
+    "cross-env": "^6.0.3",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
