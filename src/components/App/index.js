@@ -4,9 +4,12 @@ import './style.scss'
 
 export default class App extends Component {
   render() {
+    const {images} = this.props;
     return (
       <div>
-        <Parallax />
+        <h1>Boilerplate</h1>
+        <p className="description">Express and Webpack Three.js Boilerplate App</p>
+        <Parallax images={images}/>
       </div>
     )
   }

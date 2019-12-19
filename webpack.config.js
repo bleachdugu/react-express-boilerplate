@@ -97,7 +97,11 @@ module.exports = {
   resolve: {
     alias: {
       Components: path.resolve(__dirname, 'src/components/'),
+      Containers: path.resolve(__dirname, 'src/containers/'),
       Images: path.resolve(__dirname, 'src/images/'),
+      Styles: path.resolve(__dirname, 'src/styles/'),
+      Reducers: path.resolve(__dirname, 'src/reducers/'),
+      Actions: path.resolve(__dirname, 'src/actions/'),
     },
     extensions: ['.js', '.jsx', '.scss'],
   },
