@@ -44,7 +44,13 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
+        exclude: /node_modules/,
+        use: [ 'style-loader', {
+          loader:'css-loader',
+          options: {
+            modules: true,
+          }
+        } ]
       },
       {
         test: /\.s[ac]ss$/i,
@@ -63,6 +69,13 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    alias: {
+      Components: path.resolve(__dirname, 'src/components/'),
+      Images: path.resolve(__dirname, 'src/images/'),
+    },
+    extensions: ['.js', '.jsx'],
+  },
   plugins: [
     new HtmlWebPackPlugin({
       template: './src/html/index.html',
@@ -71,5 +84,5 @@ module.exports = {
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin()
-  ]
+  ],
 }

@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './components/App'
+import App from 'Components/App'
 import './styles/style.scss'
 ReactDOM.render(
   <div>
     <h1>Boilerplate</h1>
-    <p class="description">Express and Webpack Three.js Boilerplate App</p>
+    <p className="description">Express and Webpack Three.js Boilerplate App</p>
     <App />
   </div>,
   document.getElementById('app') // eslint-disable-line no-undef

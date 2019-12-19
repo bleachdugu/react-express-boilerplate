@@ -1,0 +1,28 @@
+.parallaxContainer {
+    height: 100vh;
+    left: 0;
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    
+    perspective: 1;
+}
+
+.scene {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+.content {
+    background: rgba(0,0,0,0.8);
+    margin-top: 100vh;
+    min-height: 300vh;
+    position: relative;
+    width: 100%;
+}
