@@ -10,7 +10,7 @@ export default class Parallax extends Component {
   }
     
   render() {
-    const {images} = this.props;
+    const { images } = this.props;
     return (
       <div className={styles.parallax}>
         {

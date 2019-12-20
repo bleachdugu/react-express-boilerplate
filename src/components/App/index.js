@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Parallax from 'Components/Parallax'
+import { Birds } from 'Components/ThreeJs'
+
 import './style.scss'
 
 export default class App extends Component {
@@ -9,6 +11,7 @@ export default class App extends Component {
       <div>
         <h1>Boilerplate</h1>
         <p className="description">Express and Webpack Three.js Boilerplate App</p>
+        <Birds />
         <Parallax images={images}/>
       </div>
     )
