@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import * as THREE from 'three'
-import styles from './style.scss'
+import styles from './style.module.scss'
 
 export default class Birds extends Component {
     
