@@ -5,6 +5,7 @@ import { Birds } from 'Components/ThreeJs'
 import Features from 'Containers/FeaturesContainer'
 
 import './style.scss'
+import styles from './style.module.scss';
 
 export default class App extends Component {
   render() {
@@ -15,7 +16,7 @@ export default class App extends Component {
         <p className="description">Express and Webpack Three.js Boilerplate App</p>
         <Router>
           <div>
-            <ul>
+            <ul className={styles.router_container}>
               <li>
                 <Link to="/">Home</Link>
               </li>
