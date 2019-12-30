@@ -12,18 +12,15 @@ export default class App extends Component {
     const {images} = this.props;
     return (
       <div>
-        <h1>Boilerplate</h1>
-        <p className="description">Express and Webpack Three.js Boilerplate App</p>
         <Router>
           <div>
-            <ul className={styles.router_container}>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/features">Features</Link>
-              </li>
-            </ul>
+            <div className={styles.router_container}>
+              <a><Link to="/">HOME</Link></a>
+              <a><Link to="/features">FEATURES</Link></a>
+              <a><Link to="/portfolio">PORTFOLIO</Link></a>
+              <a><Link to="/about">ABOUT</Link></a>
+              <a><Link to="/contact">CONTACT</Link></a>
+            </div>
             <Switch>
               <Route exact path="/">
                 <Birds />
