@@ -3,6 +3,11 @@ import * as THREE from 'three'
 import styles from './style.module.scss'
 
 export default class Cube extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+    };
+  }
     
   componentDidMount() {
     const width = this.mount.clientWidth
