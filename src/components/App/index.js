@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Link, Route, BrowserRouter as Router, Switch} from 'react-router-dom'
+import {Link, Route, Switch, HashRouter} from 'react-router-dom'
 import Parallax from 'Components/Parallax'
 import { Birds } from 'Components/ThreeJs'
 import Features from 'Containers/FeaturesContainer'
@@ -18,7 +18,7 @@ export default class App extends Component {
     const {images} = this.props;
     return (
       <div>
-        <Router>
+        <HashRouter>
           <div>
             <div className={styles.router_container}>
               <a><Link to="/">HOME</Link></a>
@@ -40,7 +40,7 @@ export default class App extends Component {
               </Route>
             </Switch>
           </div>
-        </Router>
+        </HashRouter>
       </div>
     )
   }
