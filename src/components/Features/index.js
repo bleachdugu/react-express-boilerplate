@@ -4,23 +4,31 @@ export default class Features extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      clearImage: false
     };
   }
 
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({clearImage: true})
+    }, 1000);
+  }
+
   render() {
+    const { clearImage } = this.state;
     const bandSet = [
       {
         url: 'https://michellezauner.bandcamp.com/album/psychopomp-2',
-        href: 'url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/psychopomp-100.jpg")'
+        href: 'https://f4.bcbits.com/img/a3458975711_10.jpg'
       },{
         url: 'https://inlovewithaghost.bandcamp.com/album/lets-go',
-        href: 'url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/lets-go-100.jpg")'
+        href: 'https://f4.bcbits.com/img/a2667576910_10.jpg'
       },{
         url: 'https://vulfpeck.bandcamp.com/album/the-beautiful-game',
-        href: 'url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-100.jpg")'
+        href: 'https://f4.bcbits.com/img/a1702319957_16.jpg'
       },{
         url: 'https://convergecult.bandcamp.com/album/jane-doe',
-        href: 'url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg")'
+        href: 'https://f4.bcbits.com/img/a1637869310_16.jpg'
       },
     ];
    
@@ -31,9 +39,11 @@ export default class Features extends Component {
             {
               bandSet.map(data => (
                 <li key={data.url} className="card">
-                  <a className="card-image" href={data.url}
-                    target="_blank"
-                    style={{ backgroundImage: data.href }}>
+                  <a className="card-image"
+                    href={data.url}
+                    style={clearImage ? {filter: 'none'} : {}}
+                    target="_blank">
+                    <img src={data.href} alt=""/>
                   </a>
                   <a className="card-description" href={data.url} target="_blank">
                     <h2>Psychopomp</h2>

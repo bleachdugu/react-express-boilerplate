@@ -10,7 +10,7 @@
 .card-image > img {
 	display: block;
 	width: 100%;
-	opacity: 0; /* visually hide the img element */
+	height: 100%;
 }
 
 .card-image.is-loaded {
